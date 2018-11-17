@@ -29,6 +29,6 @@ menuBtn.addEventListener('click' , ()=>{
     menuItem.forEach((item)=>{
       item.classList.remove('show');
     })
-
+    showMenu = false
   }
 })

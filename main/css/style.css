@@ -13,17 +13,16 @@
   background: #fff;
   transition: all 0.5s ease-out;
 }
-
-.close {
+#menu-btn.close {
   transform: rotate(180deg);
 }
-.close .btn-line:nth-child(1) {
+#menu-btn.close .btn-line:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
-.close .btn-line:nth-child(2) {
+#menu-btn.close .btn-line:nth-child(2) {
   opacity: 0;
 }
-.close .btn-line:nth-child(3) {
+#menu-btn.close .btn-line:nth-child(3) {
   transform: rotate(-45deg) translate(7px, -6px);
 }
 
@@ -42,8 +41,8 @@
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
-  width: 50%;
   float: left;
+  width: 50%;
   height: 100vh;
   overflow-x: hidden;
 }
@@ -116,7 +115,6 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  color: #fff;
 }
 
 body {
@@ -124,6 +122,7 @@ body {
   font-family: "Raleway", sans-serif;
   height: 100%;
   line-height: 1.5;
+  color: #fff;
 }
 body#bg-img {
   background: url(../img/background.jpg);
@@ -187,4 +186,53 @@ section#home {
 }
 section#home h1 {
   margin-top: 20vh;
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    align-items: center;
+    text-align: center;
+  }
+  section .lg-heading {
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  ul.menu-nav,
+div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0;
+  }
+  ul.menu-nav.show,
+div.menu-branding.show {
+    transform: translate3d(0, 0, 0);
+  }
+
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px;
+  }
+
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0);
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+  .menu-branding .portrait {
+    background: url("../img/portrait_small.jpg");
+    width: 150px;
+    height: 150px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  h1 {
+    margin-top: 32vh;
+  }
+
+  section .lg-heading {
+    font-size: 3rem;
+  }
 }

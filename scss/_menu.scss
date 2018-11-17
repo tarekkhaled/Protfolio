@@ -14,27 +14,26 @@
     background : #fff;
     @include easeOut;
   }
-
-
-}
-
-.close {
-  transform: rotate(180deg);
-  .btn-line {
-    // Line 1 - Rotate
-    &:nth-child(1){
-      transform : rotate(45deg) translate(5px, 5px)  ;
-    }
-    // Line 2 - Hide
-    &:nth-child(2) {
-      opacity: 0;
-    }
-    // Line 3 - Rotate
-    &:nth-child(3) {
-      transform : rotate(-45deg) translate(7px , -6px);
+  // Rotate Into X with Menu Lines
+  &.close {
+    transform: rotate(180deg);
+    .btn-line {
+      // Line 1 - Rotate
+      &:nth-child(1){
+        transform : rotate(45deg) translate(5px, 5px)  ;
+      }
+      // Line 2 - Hide
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      // Line 3 - Rotate
+      &:nth-child(3) {
+        transform : rotate(-45deg) translate(7px , -6px);
+      }
     }
   }
 }
+
 
 // Menu Overlay
 .menu {
@@ -46,13 +45,14 @@
   &.show {
     visibility:visible;
   }
-  &-branding , &-nav{
+  &-branding ,
+  &-nav{
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    width: 50%;
     float: left;
+    width: 50%;
     height: 100vh ;
     overflow-x: hidden ;
   }
@@ -116,6 +116,7 @@
 }
 
 // You can also use for to delay between every "li"
+// Delay each nav item slide by 0.1s
 @for $x from 1 through 4 {
   .nav-item:nth-child(#{$x}) {
     transition-delay: $x * 0.1s ;

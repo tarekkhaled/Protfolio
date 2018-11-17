@@ -3,7 +3,6 @@
 * {
   box-sizing: border-box;
   margin: 0 ;
-  color : #fff;
 }
 
 body {
@@ -12,6 +11,8 @@ body {
   font-family : 'Raleway', sans-serif;
   height: 100% ;
   line-height : 1.5 ;
+  color : #fff;
+
 }
 
 //headings
@@ -66,3 +67,4 @@ section {
   }
 
 }
+@import 'mobile';
