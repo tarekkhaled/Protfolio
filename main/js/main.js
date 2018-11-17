@@ -5,6 +5,7 @@ const menuNav = document.querySelector('.menu-nav')
 const menuBrand = document.querySelector('.menu-branding')
 const menuItem = document.querySelectorAll('.nav-item')
 
+// initialize it to false
 let showMenu = false ;
 
 menuBtn.addEventListener('click' , ()=>{
