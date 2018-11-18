@@ -1,11 +1,17 @@
 // WideScreens
 
 @include mediaXL {
+  .projects {
+    grid-template-columns: repeat(4,1fr);
+  }
 
 }
 
 //Desktop & laptops
 @include mediaLg {
+  .projects {
+    grid-template-columns: repeat(3,1fr);
+  }
 
 }
 
@@ -62,6 +68,10 @@
      margin: auto !important;
    }
  }
+ .projects {
+   grid-template-columns: repeat(2,1fr);
+ }
+
 
 }
 
@@ -75,4 +85,9 @@
       font-size: 3rem ;
     }
   }
+
+  .projects {
+    grid-template-columns: repeat(1,1fr);
+  }
+
 }
