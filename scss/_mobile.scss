@@ -50,7 +50,18 @@
     }
   }
 
-
+ .about-info {
+   display: grid;
+   grid-template-areas: 'bioImage'
+   'bio'
+   'job1'
+   'job2'
+   'job3';
+   grid-template-columns : 1fr ;
+   .bio-image {
+     margin: auto !important;
+   }
+ }
 
 }
 
