@@ -170,7 +170,7 @@ header {
 
 section {
   padding: 0rem 4rem;
-  height: 100%;
+  min-height: calc(100vh - 60px);
 }
 section #icons {
   margin-top: 1rem;
@@ -229,7 +229,9 @@ section#home h1 {
 footer {
   background: #2b2b2b;
   text-align: center;
-  padding: 1.5em;
+  padding: 1em;
+  height: 60px;
+  margin-top: 10px;
 }
 
 .lg-about {
@@ -268,6 +270,32 @@ footer {
 
 .btn-light {
   background-color: #c4c4c4;
+}
+
+#contact {
+  overflow: hidden;
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+}
+.boxes div {
+  font-size: 2rem;
+  border: 3px solid #fff;
+  padding: 1.5rem 2.5rem;
+  margin-bottom: 3rem;
+  transition: all 0.5s ease-out;
+}
+.boxes div:hover {
+  padding: 0.5rem 1.5rem;
+  background-color: #000;
+}
+.boxes div:hover span {
+  color: #fff;
 }
 
 @media screen and (min-width: 1171px) {
